@@ -17,7 +17,7 @@
 <meta property="og:description" content="iOS组5月11日组会时间：5.11 18:30-9:30 地点：f2咖啡 到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿 讲评Autolayout：上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。 任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进">
 <meta property="og:image" content="http://yoursite.com/Users/darknesschen/Downloads/58fc7e1582b9f.png">
 <meta property="og:image" content="http://yoursite.com/Users/darknesschen/Downloads/58fe058303e42.png">
-<meta property="og:updated_time" content="2017-05-12T16:28:55.000Z">
+<meta property="og:updated_time" content="2017-05-12T16:33:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS_5.11_meeting">
 <meta name="twitter:description" content="iOS组5月11日组会时间：5.11 18:30-9:30 地点：f2咖啡 到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿 讲评Autolayout：上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。 任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进">
@@ -181,25 +181,35 @@
 <p>内容（主要讲解的内容加黑，并附以介绍，详情请看任务页评论栏）：</p>
 <p>KeyPoint：</p>
 <ul>
-<li><strong>Process （布局过程 or 布局的顺序) </strong></li>
+<li><strong>Process （布局过程 or 布局的顺序) </strong><ul>
 <li>相比于 Frame 布局，Cocoa Auto Layout 除去显示（display）以外，还在之前增加了两个更多的过程：<code>updateConstraintsIfNeeded</code> 和 <code>layoutIfNeeded</code> 。这些过程按顺序进行：更新约束、布局、显示。如果你手动唤起显示，那么显示会唤起布局，布局会唤起更新约束（显示依赖布局，布局依赖约束）。</li>
 </ul>
+</li>
+</ul>
 <ul>
-<li>Compression Resistance and Content Hugging</li>
+<li>Compression Resistance and Content Hugging<ul>
 <li>像 ImageView，Label，Button 这样的控件可以根据内容计算出大小。比如 Label 中的文字越多，Label 也就越长。这个大小被称为固有值。</li>
 </ul>
-<ul>
-<li>Frame &amp; Alignment Rect</li>
-<li>自动布局参照的是 Alignment Rectangle 而不是 Frame。比如一个控件的阴影并不会影响到自动布局。应该牢记在自动布局中，Frame 没有视觉大小重要。</li>
+</li>
 </ul>
 <ul>
-<li>AutoLayout constraint</li>
+<li>Frame &amp; Alignment Rect<ul>
+<li>自动布局参照的是 Alignment Rectangle 而不是 Frame。比如一个控件的阴影并不会影响到自动布局。应该牢记在自动布局中，Frame 没有视觉大小重要。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>AutoLayout constraint<ul>
 <li>视图的布局体系由一系列线性方程所确定，每个约束都可看作是一个方程的表示。</li>
+</ul>
+</li>
 <li><img src="/Users/darknesschen/Downloads/58fc7e1582b9f.png" alt=""></li>
 </ul>
 <ul>
-<li>Cassowary</li>
+<li>Cassowary<ul>
 <li>是上世纪 90 年代的一个布局算法，它通过将布局问题抽象成线形等式和不等式约束，求解这个多元方程组来算出 x，y，width 和 height。</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li>Autolayout performance(性能)</li>
@@ -212,17 +222,22 @@
 <li>ComponentKit and its layout</li>
 </ul>
 <ul>
-<li>Constraint priority</li>
+<li>Constraint priority<ul>
 <li>每个约束都有优先级（Priority），范围从1～1000。优先级为1000的约束为必须的（required），其余的为可选的（optional）优先级的绝对大小没有意义，重要的是相对大小。Auto-Layout 会优先满足优先级高的约束。如果一个可选的约束不能被满足，Auto-Layout 会跳过它转而计算下一个约束。</li>
 </ul>
+</li>
+</ul>
 <ul>
-<li>AutoLayout with hidden UIViewslayouts / variable row heights(iOS 7 &amp; iOS 8)</li>
+<li>AutoLayout with hidden UIViewslayouts / variable row heights(iOS 7 &amp; iOS 8)<ul>
 <li>可以用来解决需求迅速改变时所遇到的问题，即某个控件不需要了，可以把它直接隐藏起来。</li>
+</ul>
+</li>
 </ul>
 <ul>
 <li><p>AutoLayout in UITableView for dynamic cell</p>
-</li>
-<li><p>TableViewCell可以自适应高度，但这个功能不是默认实现的。只有当以下的两个属性被设置后，系统才会使用AutoLayout计算每行的实际高度。</p>
+<ul>
+<li>TableViewCell可以自适应高度，但这个功能不是默认实现的。只有当以下的两个属性被设置后，系统才会使用AutoLayout计算每行的实际高度。</li>
+</ul>
 </li>
 </ul>
 <p><code>tableView.estimatedRowHeight = 85.0</code></p>
