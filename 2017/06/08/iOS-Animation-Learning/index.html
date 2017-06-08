@@ -8,16 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>iOS Animation Learning | DarknessChen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
+  <meta name="description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS Animation Learning">
 <meta property="og:url" content="http://yoursite.com/2017/06/08/iOS-Animation-Learning/index.html">
 <meta property="og:site_name" content="DarknessChen">
-<meta property="og:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
-<meta property="og:updated_time" content="2017-06-08T08:38:38.000Z">
+<meta property="og:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
+<meta property="og:image" content="http://yoursite.com/Users/darknesschen/Desktop/屏幕快照%202017-06-08%20下午4.24.43.png">
+<meta property="og:updated_time" content="2017-06-08T08:42:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Animation Learning">
-<meta name="twitter:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
+<meta name="twitter:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
+<meta name="twitter:image" content="http://yoursite.com/Users/darknesschen/Desktop/屏幕快照%202017-06-08%20下午4.24.43.png">
   
     <link rel="alternative" href="/atom.xml" title="DarknessChen" type="application/atom+xml">
   
@@ -170,28 +172,20 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。</p>
+<p>Keywords:<br><strong>values</strong> ： 就是上述的NSArray对象。里面的元素称为”关键帧”(keyframe)。动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧<br><strong>path</strong> ： 可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动。path只对CALayer的anchorPoint和position起作用。如果你设置了path，那么values将被忽略。<br><strong>keyTimes</strong> ： 可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧.当keyTimes没有设置的时候,各个关键帧的时间是平分的。</p>
+<p><strong>基础动画</strong> 主要提供了对于CALayer对象中的可变属性进行简单动画的操作。比如：位移、透明度、缩放、旋转、背景色等等。</p>
 <p>Keywords:</p>
-<p>values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(keyframe)。动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧</p>
-<p>path ： 可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动。path只对CALayer的anchorPoint和position起作用。如果你设置了path，那么values将被忽略。</p>
-<p>keyTimes ： 可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧.当keyTimes没有设置的时候,各个关键帧的时间是平分的。</p>
-<p>基础动画 主要提供了对于CALayer对象中的可变属性进行简单动画的操作。比如：位移、透明度、缩放、旋转、背景色等等。</p>
-<p>Keywords:</p>
-<p>fromValue ： keyPath对应的初始值</p>
-<p>toValue ： keyPath对应的结束值</p>
+<p><strong>fromValue</strong> ： keyPath对应的初始值<br><strong>toValue</strong> ： keyPath对应的结束值</p>
 <p>(CABasicAnimation可看做是最多只有2个关键帧的CAKeyframeAnimation)</p>
-<p>func doKeyframeFade() {<br>//Usage of CAKeyFrameAnimation<br>let transitionAnimation = CAKeyframeAnimation(keyPath:”backgroundColor”)<br>transitionAnimation.repeatCount = .infinity<br>transitionAnimation.duration = 4.5<br>transitionAnimation.keyTimes = [ 0, 0.5, 1.0 ]<br>transitionAnimation.values = [UIColor.green.cgColor, UIColor.red.cgColor, UIColor.blue.cgColor]<br>blueView.layer.add(transitionAnimation, forKey:”backgroundColor”)</p>
-<p>}</p>
-<p>func doBasicFade() {<br>//Usage of CABasicAnimation<br>let transitionAnimation = CABasicAnimation(keyPath:”opacity”)<br>transitionAnimation.duration = 4.5<br>transitionAnimation.fromValue = 0.0<br>transitionAnimation.toValue = 1.0<br>transitionAnimation.repeatCount = .infinity<br>blueView.layer.add(transitionAnimation, forKey:”animateOpacity”)</p>
-<p>let motionAnimation = CABasicAnimation(keyPath:”position”)<br>motionAnimation.duration = 4.5<br>motionAnimation.repeatCount = .infinity<br>motionAnimation.fromValue = CGPoint(x: 0, y: view.frame.height / 2 - 50)<br>motionAnimation.toValue = CGPoint(x: view.frame.width, y: view.frame.height / 2 - 50)<br>// motionAnimation.isRemovedOnCompletion = false<br>blueView.layer.add(motionAnimation, forKey: “positionMove”)</p>
-<p>}</p>
-<p>override func viewDidAppear(_ animated: Bool) {<br>super.viewDidAppear(animated)<br>blueView = UIView()<br>blueView.frame = CGRect(x: 0, y: view.frame.height / 2 - 50, width: 200, height: 100)<br>blueView.backgroundColor = UIColor.blue<br>blueView.isOpaque = true<br>view.addSubview(blueView)<br>doBasicFade()<br>doKeyframeFade()<br>}</p>
+<p><img src="/Users/darknesschen/Desktop/屏幕快照 2017-06-08 下午4.24.43.png" alt="屏幕快照 2017-06-08 下午4.24.43"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">  </div><div class="line">    <span class="function"><span class="keyword">func</span> <span class="title">doKeyframeFade</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="comment">//Usage of CAKeyFrameAnimation</span></div><div class="line">    <span class="keyword">let</span> transitionAnimation = <span class="type">CAKeyframeAnimation</span>(keyPath:<span class="string">"backgroundColor"</span>)</div><div class="line">    transitionAnimation.repeatCount = .infinity</div><div class="line">    transitionAnimation.duration = <span class="number">4.5</span></div><div class="line">    transitionAnimation.keyTimes = [ <span class="number">0</span>, <span class="number">0.5</span>, <span class="number">1.0</span> ]</div><div class="line">    transitionAnimation.values = [<span class="type">UIColor</span>.green.cgColor, <span class="type">UIColor</span>.red.cgColor, <span class="type">UIColor</span>.blue.cgColor]</div><div class="line">    blueView.layer.add(transitionAnimation, forKey:<span class="string">"backgroundColor"</span>)</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">doBasicFade</span><span class="params">()</span></span> &#123;</div><div class="line">    <span class="comment">//Usage of CABasicAnimation</span></div><div class="line">    <span class="keyword">let</span> transitionAnimation = <span class="type">CABasicAnimation</span>(keyPath:<span class="string">"opacity"</span>)</div><div class="line">    transitionAnimation.duration = <span class="number">4.5</span></div><div class="line">    transitionAnimation.fromValue = <span class="number">0.0</span></div><div class="line">    transitionAnimation.toValue = <span class="number">1.0</span></div><div class="line">    transitionAnimation.repeatCount = .infinity</div><div class="line">    blueView.layer.add(transitionAnimation, forKey:<span class="string">"animateOpacity"</span>)</div><div class="line">    </div><div class="line">    <span class="keyword">let</span> motionAnimation = <span class="type">CABasicAnimation</span>(keyPath:<span class="string">"position"</span>)</div><div class="line">    motionAnimation.duration = <span class="number">4.5</span></div><div class="line">    motionAnimation.repeatCount = .infinity</div><div class="line">    motionAnimation.fromValue = <span class="type">CGPoint</span>(x: <span class="number">0</span>, y: view.frame.height / <span class="number">2</span> - <span class="number">50</span>)</div><div class="line">    motionAnimation.toValue = <span class="type">CGPoint</span>(x: view.frame.width, y: view.frame.height / <span class="number">2</span> - <span class="number">50</span>)</div><div class="line">   <span class="comment">// motionAnimation.isRemovedOnCompletion = false</span></div><div class="line">    blueView.layer.add(motionAnimation, forKey: <span class="string">"positionMove"</span>)</div><div class="line">    </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">override</span> <span class="function"><span class="keyword">func</span> <span class="title">viewDidAppear</span><span class="params">(<span class="number">_</span> animated: Bool)</span></span> &#123;</div><div class="line">    <span class="keyword">super</span>.viewDidAppear(animated)</div><div class="line">    blueView = <span class="type">UIView</span>()</div><div class="line">    blueView.frame = <span class="type">CGRect</span>(x: <span class="number">0</span>, y: view.frame.height / <span class="number">2</span> - <span class="number">50</span>, width: <span class="number">200</span>, height: <span class="number">100</span>)</div><div class="line">    blueView.backgroundColor = <span class="type">UIColor</span>.blue</div><div class="line">    blueView.isOpaque = <span class="literal">true</span></div><div class="line">    view.addSubview(blueView)</div><div class="line">    doBasicFade()</div><div class="line">    doKeyframeFade()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>1.Core Animation 工作机制:</p>
 <ul>
 <li>开发者所有关于Core Animation的操作都是基于图层，图层对象是3D空间向后垂直投影的一个2D平面。垂直投影可以想象成，一个物体站在一面墙前，一个垂直于墙面的光源，照射物体，在墙上留下的阴影，由于是垂直光源，无论物体是远离墙面，还是靠近墙面，阴影的大小都不会发生变化.</li>
-<li><p>一个图层抓取由View提供的内容，并把这些内容缓存在一张位图中。iOS程序中每个View控件都有自己的Layer，View上的子控件，例如：Label，Image等，便是View向Layer提供的内容，而平移，旋转，缩放等参数，便是状态信息。</p>
-</li>
-<li><p>在硬件层面中对位图的操作远远快于在软件层面。基于Layer的动画，Core Animation把layer保留的bitmap和状态信息传给图形硬件，图形硬件负责使用新的信息操作bitmap。基于View 绘制，是通过调用view的drawRect方法来使用新的参数重绘内容改变view。这种绘制代价很高，因为绘制在总线程消耗CPU完成工作。</p>
-</li>
+<li>一个图层抓取由View提供的内容，并把这些内容缓存在一张位图中。iOS程序中每个View控件都有自己的Layer，View上的子控件，例如：Label，Image等，便是View向Layer提供的内容，而平移，旋转，缩放等参数，便是状态信息。</li>
+</ul>
+<ul>
+<li>在硬件层面中对位图的操作远远快于在软件层面。基于Layer的动画，Core Animation把layer保留的bitmap和状态信息传给图形硬件，图形硬件负责使用新的信息操作bitmap。基于View 绘制，是通过调用view的drawRect方法来使用新的参数重绘内容改变view。这种绘制代价很高，因为绘制在总线程消耗CPU完成工作。</li>
 </ul>
 <p>2.为什么动画结束后返回原状态？为什么动画在移动过程中我们不能进行操作？</p>
 <p>首先我们需要搞明白一点的是，layer动画运行的过程是怎样的？其实在我们给一个视图添加layer动画时，真正移动并不是我们的视图本身，而是 presentation layer 的一个缓存。动画开始时 presentation layer开始移动，原始layer隐藏，动画结束时，presentation layer从屏幕上移除，原始layer显示。这就解释了为什么我们的视图在动画结束后又回到了原来的状态，因为它根本就没动过。</p>
