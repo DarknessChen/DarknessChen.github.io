@@ -6,22 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>iOS_5.11_meeting | DarknessChen</title>
+  <title>iOS Animation Learning | DarknessChen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="iOS组5月11日组会时间：5.11 18:30-9:30 地点：f2咖啡 到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿 讲评Autolayout：上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。 任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进">
-<meta name="keywords" content="iOS">
+  <meta name="description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
 <meta property="og:type" content="article">
-<meta property="og:title" content="iOS_5.11_meeting">
-<meta property="og:url" content="http://yoursite.com/2017/05/13/iOS-5-11-meeting/index.html">
+<meta property="og:title" content="iOS Animation Learning">
+<meta property="og:url" content="http://yoursite.com/2017/06/08/iOS-Animation-Learning/index.html">
 <meta property="og:site_name" content="DarknessChen">
-<meta property="og:description" content="iOS组5月11日组会时间：5.11 18:30-9:30 地点：f2咖啡 到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿 讲评Autolayout：上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。 任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进">
-<meta property="og:image" content="http://yoursite.com/assets/2017.5.11-2.png">
-<meta property="og:image" content="http://yoursite.com/assets/2017.5.11-1.png">
-<meta property="og:updated_time" content="2017-06-08T06:08:10.000Z">
+<meta property="og:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
+<meta property="og:updated_time" content="2017-06-08T08:38:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="iOS_5.11_meeting">
-<meta name="twitter:description" content="iOS组5月11日组会时间：5.11 18:30-9:30 地点：f2咖啡 到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿 讲评Autolayout：上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。 任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进">
-<meta name="twitter:image" content="http://yoursite.com/assets/2017.5.11-2.png">
+<meta name="twitter:title" content="iOS Animation Learning">
+<meta name="twitter:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords: values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(">
   
     <link rel="alternative" href="/atom.xml" title="DarknessChen" type="application/atom+xml">
   
@@ -153,111 +149,54 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-iOS-5-11-meeting" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-iOS-Animation-Learning" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      iOS_5.11_meeting
+      iOS Animation Learning
     </h1>
   
 
         
-        <a href="/2017/05/13/iOS-5-11-meeting/" class="archive-article-date">
-  	<time datetime="2017-05-12T16:23:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-13</time>
+        <a href="/2017/06/08/iOS-Animation-Learning/" class="archive-article-date">
+  	<time datetime="2017-06-08T08:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-08</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="iOS组5月11日组会"><a href="#iOS组5月11日组会" class="headerlink" title="iOS组5月11日组会"></a>iOS组5月11日组会</h1><p>时间：5.11 18:30-9:30</p>
-<p>地点：f2咖啡</p>
-<p>到会情况：白云请假，陈胤方、王lulu迟到了一小小会儿</p>
-<h4 id="讲评Autolayout："><a href="#讲评Autolayout：" class="headerlink" title="讲评Autolayout："></a>讲评Autolayout：</h4><p>上一次组长在社区布置了关于Autolayout的任务，任务完成后链接需附在任务页面的评论区里。</p>
-<p>任务完成情况：王路远完成的最好，陈胤方用了蹩脚的英文且KeyPoint部分没有写下来，其他人直接发到了组长邮箱中没有附在评论区里。所以，由王路远进行了知识点的梳理与总结，且获得了组长给予的五十元亚马逊代金券作为奖励。</p>
-<p>内容（主要讲解的内容加黑，并附以介绍，详情请看任务页评论栏）：</p>
-<p>KeyPoint：</p>
+        <p>CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。</p>
+<p>Keywords:</p>
+<p>values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(keyframe)。动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧</p>
+<p>path ： 可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动。path只对CALayer的anchorPoint和position起作用。如果你设置了path，那么values将被忽略。</p>
+<p>keyTimes ： 可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧.当keyTimes没有设置的时候,各个关键帧的时间是平分的。</p>
+<p>基础动画 主要提供了对于CALayer对象中的可变属性进行简单动画的操作。比如：位移、透明度、缩放、旋转、背景色等等。</p>
+<p>Keywords:</p>
+<p>fromValue ： keyPath对应的初始值</p>
+<p>toValue ： keyPath对应的结束值</p>
+<p>(CABasicAnimation可看做是最多只有2个关键帧的CAKeyframeAnimation)</p>
+<p>func doKeyframeFade() {<br>//Usage of CAKeyFrameAnimation<br>let transitionAnimation = CAKeyframeAnimation(keyPath:”backgroundColor”)<br>transitionAnimation.repeatCount = .infinity<br>transitionAnimation.duration = 4.5<br>transitionAnimation.keyTimes = [ 0, 0.5, 1.0 ]<br>transitionAnimation.values = [UIColor.green.cgColor, UIColor.red.cgColor, UIColor.blue.cgColor]<br>blueView.layer.add(transitionAnimation, forKey:”backgroundColor”)</p>
+<p>}</p>
+<p>func doBasicFade() {<br>//Usage of CABasicAnimation<br>let transitionAnimation = CABasicAnimation(keyPath:”opacity”)<br>transitionAnimation.duration = 4.5<br>transitionAnimation.fromValue = 0.0<br>transitionAnimation.toValue = 1.0<br>transitionAnimation.repeatCount = .infinity<br>blueView.layer.add(transitionAnimation, forKey:”animateOpacity”)</p>
+<p>let motionAnimation = CABasicAnimation(keyPath:”position”)<br>motionAnimation.duration = 4.5<br>motionAnimation.repeatCount = .infinity<br>motionAnimation.fromValue = CGPoint(x: 0, y: view.frame.height / 2 - 50)<br>motionAnimation.toValue = CGPoint(x: view.frame.width, y: view.frame.height / 2 - 50)<br>// motionAnimation.isRemovedOnCompletion = false<br>blueView.layer.add(motionAnimation, forKey: “positionMove”)</p>
+<p>}</p>
+<p>override func viewDidAppear(_ animated: Bool) {<br>super.viewDidAppear(animated)<br>blueView = UIView()<br>blueView.frame = CGRect(x: 0, y: view.frame.height / 2 - 50, width: 200, height: 100)<br>blueView.backgroundColor = UIColor.blue<br>blueView.isOpaque = true<br>view.addSubview(blueView)<br>doBasicFade()<br>doKeyframeFade()<br>}</p>
+<p>1.Core Animation 工作机制:</p>
 <ul>
-<li><strong>Process （布局过程 or 布局的顺序) </strong><ul>
-<li>相比于 Frame 布局，Cocoa Auto Layout 除去显示（display）以外，还在之前增加了两个更多的过程：<code>updateConstraintsIfNeeded</code> 和 <code>layoutIfNeeded</code> 。这些过程按顺序进行：更新约束、布局、显示。如果你手动唤起显示，那么显示会唤起布局，布局会唤起更新约束（显示依赖布局，布局依赖约束）。</li>
-</ul>
+<li>开发者所有关于Core Animation的操作都是基于图层，图层对象是3D空间向后垂直投影的一个2D平面。垂直投影可以想象成，一个物体站在一面墙前，一个垂直于墙面的光源，照射物体，在墙上留下的阴影，由于是垂直光源，无论物体是远离墙面，还是靠近墙面，阴影的大小都不会发生变化.</li>
+<li><p>一个图层抓取由View提供的内容，并把这些内容缓存在一张位图中。iOS程序中每个View控件都有自己的Layer，View上的子控件，例如：Label，Image等，便是View向Layer提供的内容，而平移，旋转，缩放等参数，便是状态信息。</p>
+</li>
+<li><p>在硬件层面中对位图的操作远远快于在软件层面。基于Layer的动画，Core Animation把layer保留的bitmap和状态信息传给图形硬件，图形硬件负责使用新的信息操作bitmap。基于View 绘制，是通过调用view的drawRect方法来使用新的参数重绘内容改变view。这种绘制代价很高，因为绘制在总线程消耗CPU完成工作。</p>
 </li>
 </ul>
-<ul>
-<li>Compression Resistance and Content Hugging<ul>
-<li>像 ImageView，Label，Button 这样的控件可以根据内容计算出大小。比如 Label 中的文字越多，Label 也就越长。这个大小被称为固有值。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Frame &amp; Alignment Rect<ul>
-<li>自动布局参照的是 Alignment Rectangle 而不是 Frame。比如一个控件的阴影并不会影响到自动布局。应该牢记在自动布局中，Frame 没有视觉大小重要。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>AutoLayout constraint<ul>
-<li>视图的布局体系由一系列线性方程所确定，每个约束都可看作是一个方程的表示。<br><img src="/assets/2017.5.11-2.png" alt="img">{% asset_img 2017.5.11-2.png 图1 %}
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Cassowary<ul>
-<li>是上世纪 90 年代的一个布局算法，它通过将布局问题抽象成线形等式和不等式约束，求解这个多元方程组来算出 x，y，width 和 height。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>Autolayout performance(性能)<br><img src="/assets/2017.5.11-1.png" alt="img">{% asset_img 2017.5.11-1.png 图2 %}
-</li>
-</ul>
-<ul>
-<li><strong>Masonry &amp; <a href="https://github.com/SnapKit" target="_blank" rel="external">SnapKit</a></strong></li>
-</ul>
-<ul>
-<li>ComponentKit and its layout</li>
-</ul>
-<ul>
-<li>Constraint priority<ul>
-<li>每个约束都有优先级（Priority），范围从1～1000。优先级为1000的约束为必须的（required），其余的为可选的（optional）优先级的绝对大小没有意义，重要的是相对大小。Auto-Layout 会优先满足优先级高的约束。如果一个可选的约束不能被满足，Auto-Layout 会跳过它转而计算下一个约束。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>AutoLayout with hidden UIViewslayouts / variable row heights(iOS 7 &amp; iOS 8)<ul>
-<li>可以用来解决需求迅速改变时所遇到的问题，即某个控件不需要了，可以把它直接隐藏起来。</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><p>AutoLayout in UITableView for dynamic cell</p>
-<ul>
-<li>TableViewCell可以自适应高度，但这个功能不是默认实现的。只有当以下的两个属性被设置后，系统才会使用AutoLayout计算每行的实际高度。</li>
-</ul>
-</li>
-</ul>
-<p><code>tableView.estimatedRowHeight = 85.0</code></p>
-<p><code>tableView.rowHeight = UITableViewAutomaticDimension</code></p>
-<p>Questions（各人回答各不相同）：</p>
-<ul>
-<li>Pros and cons of autolayout and frame layout.</li>
-</ul>
-<ul>
-<li>How to get real frame after autolayout</li>
-</ul>
-<ul>
-<li>Using autolayout to create same width spacing (使用autolayout作出等间距的效果)</li>
-</ul>
-<ul>
-<li>Some reason for application crash when update the constraints after remove the views which has some mutual constraint relationship.</li>
-</ul>
-<p>在讲解过程中组长又用具体的事例来举例子，创建了一个button，将其置于Storyboard中，但在代码中仍添加约束。如果什么都不用，直接获取frame的话会得到的是错误的frame，但如果用layoutIfNeeded，可以迅速获得它的frame，如果用setNeedsLayout会在UIView周期结束后改变，从而得到真实的frame。讲解完成后，组长布置了下几周的规划与要求，下一周将要学习的是动画方面的内容。布置的任务会在近几天贴出。</p>
-<h4 id="关于实习的分享"><a href="#关于实习的分享" class="headerlink" title="关于实习的分享"></a>关于实习的分享</h4><p>接下来我们又自发的进行了关于实习的讨论：我们组组长和王lulu童鞋均拿到了很好的实习。薪金的话，对于初创公司，一般要比较高（9k+可接受），而正在飞速发展的起步了一段时间的公司薪金比初创公司低一点，但里面会有很多大牛，可以向他们学习。而对于大厂，会再低一些，而且对于iOS端的语言要求一般是OC，Swift很少，但是去大公司实习的经历难得。总之是各有千秋，因人而异，各取所需。总之，这个话题也讨论了不短的时间，令新人收获很大。</p>
-<p>然后在会议的最后我们吐槽了一番。。</p>
+<p>2.为什么动画结束后返回原状态？为什么动画在移动过程中我们不能进行操作？</p>
+<p>首先我们需要搞明白一点的是，layer动画运行的过程是怎样的？其实在我们给一个视图添加layer动画时，真正移动并不是我们的视图本身，而是 presentation layer 的一个缓存。动画开始时 presentation layer开始移动，原始layer隐藏，动画结束时，presentation layer从屏幕上移除，原始layer显示。这就解释了为什么我们的视图在动画结束后又回到了原来的状态，因为它根本就没动过。</p>
+<p>这个同样也可以解释为什么在动画移动过程中，我们为何不能对其进行任何操作。</p>
+<p>所以在我们完成layer动画之后，最好将我们的layer属性设置为我们最终状态的属性，然后将presentation layer 移除掉。</p>
 
       
 
@@ -266,17 +205,6 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">iOS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -327,7 +255,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/05/13/iOS-5-11-meeting/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/06/08/iOS-Animation-Learning/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -341,18 +269,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/06/08/iOS-Animation-Learning/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          iOS Animation Learning
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/05/09/I-hear-and-I-forget/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">I hear and I forget</div>
+    <a href="/2017/05/13/iOS-5-11-meeting/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">iOS_5.11_meeting</div>
       <i class="icon-circle-right"></i>
     </a>
   
