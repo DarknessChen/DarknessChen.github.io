@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>iOS Animation Learning | DarknessChen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
+  <meta name="description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="iOS Animation Learning">
 <meta property="og:url" content="http://yoursite.com/2017/06/08/iOS-Animation-Learning/index.html">
 <meta property="og:site_name" content="DarknessChen">
-<meta property="og:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
+<meta property="og:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。">
 <meta property="og:image" content="http://yoursite.com/Users/darknesschen/Desktop/屏幕快照%202017-06-08%20下午4.24.43.png">
-<meta property="og:updated_time" content="2017-06-08T08:42:43.000Z">
+<meta property="og:updated_time" content="2017-06-08T08:48:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS Animation Learning">
-<meta name="twitter:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。 Keywords:values ： 就是上述的NSArray对象。里面的元素称为”关键帧”(k">
+<meta name="twitter:description" content="CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。">
 <meta name="twitter:image" content="http://yoursite.com/Users/darknesschen/Desktop/屏幕快照%202017-06-08%20下午4.24.43.png">
   
     <link rel="alternative" href="/atom.xml" title="DarknessChen" type="application/atom+xml">
@@ -171,8 +171,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。</p>
-<p>Keywords:<br><strong>values</strong> ： 就是上述的NSArray对象。里面的元素称为”关键帧”(keyframe)。动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧<br><strong>path</strong> ： 可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动。path只对CALayer的anchorPoint和position起作用。如果你设置了path，那么values将被忽略。<br><strong>keyTimes</strong> ： 可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧.当keyTimes没有设置的时候,各个关键帧的时间是平分的。</p>
+        <p>CAKeyframeAnimation和CABaseAnimation都属于CAPropertyAnimatin的子类。CABaseAnimation只能从一个数值（fromValue）变换成另一个数值（toValue）,而CAKeyframeAnimation则会使用一个NSArray保存一组关键帧。<br><a id="more"></a><br>Keywords:<br><strong>values</strong> ： 就是上述的NSArray对象。里面的元素称为”关键帧”(keyframe)。动画对象会在指定的时间(duration)内，依次显示values数组中的每一个关键帧<br><strong>path</strong> ： 可以设置一个CGPathRef\CGMutablePathRef,让层跟着路径移动。path只对CALayer的anchorPoint和position起作用。如果你设置了path，那么values将被忽略。<br><strong>keyTimes</strong> ： 可以为对应的关键帧指定对应的时间点,其取值范围为0到1.0,keyTimes中的每一个时间值都对应values中的每一帧.当keyTimes没有设置的时候,各个关键帧的时间是平分的。</p>
 <p><strong>基础动画</strong> 主要提供了对于CALayer对象中的可变属性进行简单动画的操作。比如：位移、透明度、缩放、旋转、背景色等等。</p>
 <p>Keywords:</p>
 <p><strong>fromValue</strong> ： keyPath对应的初始值<br><strong>toValue</strong> ： keyPath对应的结束值</p>
